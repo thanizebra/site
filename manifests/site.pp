@@ -14,3 +14,12 @@ service {
 }
 
 
+file { '/etc/apache2/apache2.conf':
+  ensure => file,
+  owner => root,
+  group => root,
+  mode  => 644,
+  source => '/repo/modules/apache2/files/apache2.conf'
+}
+
+
